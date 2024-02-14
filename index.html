@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patilkaki</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FADA5E
+    background-size: cover;
+    background-position: center;
+    }
+    .hero-section {
+      height: 100vh;
+    background-image: url('https://live.staticflickr.com/65535/49644713007_005a876f4e_b.jpg'); /* Add the path to your background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    color: white;
+    }
+    .about-founder-section {
+      display: flex;
+      padding: 50px;
+      background-color: #f9f9f9;
+      text-align: center;
+      background-color: #FADA5E
+      justify-content: center; 
+    align-items: center; 
+    }
+    .founder-image img {
+    width: 200px; /* Adjust the width of the image as needed */
+    height: auto;
+}
+.founder-content {
+    max-width: 600px; /* Adjust the maximum width of the content as needed */
+    text-align: center; /* Center-align content */
+}
+    .why-choose-section {
+      padding: 50px;
+      background-color: #808080;
+      text-align: center;
+      background-color: #FADA5E
+    }
+    .cta-section {
+      padding: 50px;
+      background-color: #ccc;
+      text-align: center;
+      background-color: #FADA5E
+    }
+    #countdown {
+      font-size: 24px;
+      color: #fff;
+      margin-top: 20px;
+      background-color: #FADA5E
+    }
+    #signup-form {
+      position: fixed;
+      bottom: -400px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      transition: bottom 0.5s ease;
+    }
+    #signup-form input[type="text"],
+    #signup-form input[type="email"] {
+      width: 80%;
+      padding: 10px;
+      margin: 10px;
+    }
+    #signup-form button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      background-color: #808080;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>Welcome to Patilkaki</h1>
+    <p>Where Innovation Meets Creativity</p>
+  </div>
+
+  <!-- About Founder Section -->
+  <div class="about-founder-section">
+    <div class="founder-content">
+
+    <h2>About Our Founder</h2>
+    <p>Meet our visionary founder
+      Darsheel,the visionary Co-founder of Patilkaki,
+      embarked on his journey with a relentless passion for innovation and creativity.
+      Darsheel and the whole team has led Patilkaki to become a trailblazer in Food Industry,
+      empowering businesses all over India.Darsheel is determined to bring the legendary recipes of PatilKaki to the world.</p>
+      </div>
+      <div class="Founder-image">
+        <img src="https://fulminofan.com/wp-content/uploads/2023/01/PatilKaki-with-Geeta-Patil-on-Shank-Tank-India.jpg", alt="Founder Image">
+      </div>
+  </div>
+
+  <!-- Why Choose Us Section -->
+  <div class="why-choose-section">
+    <h2>Why Choose Us?</h2>
+    <div>
+      <img src="https://clipartix.com/wp-content/uploads/2017/03/Snack-clipart-2.gif" alt="Icon 1">
+      <p> Businesses should choose Darsheel's services because of their track record of customer satisfaction.</p>
+      <img src="https://img.freepik.com/premium-vector/hand-draw-illustration-asian-food-watercolor-restaurant-menu_653634-268.jpg" alt="Icon 2">
+      <p> Darsheel's services may offer customizable solutions that can be tailored to meet the unique requirements of each business.</p>
+      <img src="https://thumbs.dreamstime.com/b/delicious-cookies-isolated-scribble-vector-illustration-graphic-design-145549542.jpg" alt="Icon 3">
+      <p>Businesses should choose Patilkaki services because of their reputation for delivering high-quality results</p>
+    </div>
+    <p>Icons and reasons why to choose Darsheel's services.</p>
+  </div>
+
+  <!-- Countdown Timer -->
+  <div class="countdown-section">
+    <h2>Hurry Up!</h2>
+    <div id="countdown">10:00</div>
+  </div>
+
+  <!-- Call to Action Section -->
+  <div class="cta-section">
+    <h2>Call to Action</h2>
+    <p>Take action now!</p>
+    <button onclick="showForm()">Sign Up Now</button>
+  </div>
+
+  <!-- Sign Up Form -->
+  <div id="signup-form">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Your Phone Number">
+      <input type="email" placeholder="Your Email Address">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    // Countdown Timer
+    var countdown = document.getElementById('countdown');
+    var seconds = 600; // 10 minutes
+
+    function countdownTimer() {
+      var minutes = Math.floor(seconds / 60);
+      var remainingSeconds = seconds % 60;
+
+      if (remainingSeconds < 10) {
+        remainingSeconds = "0" + remainingSeconds;
+      }
+
+      countdown.innerHTML = minutes + ":" + remainingSeconds;
+
+      if (seconds <= 0) {
+        clearInterval(timer);
+      } else {
+        seconds--;
+      }
+    }
+
+    var timer = setInterval(countdownTimer, 1000);
+
+    // Slide up form after 15 seconds
+    setTimeout(function() {
+      showForm();
+    }, 15000);
+
+    function showForm() {
+      var form = document.getElementById('signup-form');
+      if (form.style.bottom === '-400px') {
+        form.style.bottom = '0';
+      } else {
+        form.style.bottom = '-400px';
+      }
+    }
+</script>
+</body>
+</html>
+  
+
